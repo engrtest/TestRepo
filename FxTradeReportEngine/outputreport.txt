@@ -1,0 +1,42 @@
+Problematic trade entity: Entity: foo, Type: B, Currency: SGP, AgreedFx: 0.5, InstructionDate: 2017-11-28, SettlementDate: 2017-11-29, noOfUnits: 200, PricePerUnit: 100.25 with error message: Invalid Currency code, so not acceptable
+Problematic trade entity: Entity: bar, Type: S, Currency: AED, AgreedFx: 0.22, InstructionDate: 2017-11-30, SettlementDate: 2017-01-12, noOfUnits: 450, PricePerUnit: 150.5 with error message: Given trade date is invalid, so not acceptable
+Problematic trade entity: Entity: bar, Type: U, Currency: AED, AgreedFx: 0.22, InstructionDate: 2017-11-30, SettlementDate: 2017-12-01, noOfUnits: 450, PricePerUnit: 150.5 with error message: Given trade type is invalid, so not acceptable
+Problematic trade entity: Entity: xyz, Type: B, Currency: AUD, AgreedFx: 0.28, InstructionDate: 2017-11-28, SettlementDate: 2017-11-29, noOfUnits: 200, PricePerUnit: 120.5 with error message: Duplicate Trade found, so not acceptable, so not acceptable
+Problematic trade entity: Entity: xyz, Type: S, Currency: EUR, AgreedFx: 0.5, InstructionDate: 2017-12-01, SettlementDate: 2017-12-04, noOfUnits: 150, PricePerUnit: 125.35 with error message: Duplicate Trade found, so not acceptable, so not acceptable
+
+----------------------------------------
+         Daily Outgoing Amount in USD          
+----------------------------------------
+      Date       |    Trade Amount      
+----------------------------------------
+2017-11-30      |    7901.250
+2017-11-29      |    6748.000
+
+----------------------------------------
+         Daily Incoming Amount in USD          
+----------------------------------------
+      Date       |    Trade Amount      
+----------------------------------------
+2017-12-03      |    15256.250
+2017-12-04      |    8840.00
+2017-11-28      |    7976.250
+
+----------------------------------------
+         Daily Outgoing Rank          
+----------------------------------------
+      Date       |   Entity  | Rank      
+----------------------------------------
+2017-11-30      |    abc      |    1
+2017-11-30      |    bar      |    2
+2017-11-29      |    xyz      |    1
+
+----------------------------------------
+         Daily Incoming Rank          
+----------------------------------------
+      Date       |   Entity  | Rank      
+----------------------------------------
+2017-12-04      |    xyz      |    1
+2017-12-04      |    foo      |    2
+2017-12-04      |    exp      |    3
+2017-12-03      |    foo      |    1
+2017-11-28      |    bar      |    1
